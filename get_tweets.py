@@ -19,7 +19,7 @@ class TweetReader():
         tweet_num = 0
         for t in tweets:
             tweet_num += 1
-            t = t.full_text.replace("🟠 NEWSBLOG ", "").replace("+++", "").replace("🔵 UND SONST SO? ", "").replace("+ + +", "")
+            t = t.full_text.replace("🟠 NEWSBLOG ", "").replace("+++", "").replace("🔵 UND SONST SO? ", "").replace("+ + +", "").replace("🔴 LIVEBLOG ", "")
             tweet_dict[tweet_num] = t
 
         return tweet_dict
