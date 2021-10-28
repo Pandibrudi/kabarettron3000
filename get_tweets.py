@@ -29,7 +29,7 @@ class TweetReader():
         tweets_to_save = self.load_tweets()
 
         with open('data/data.json', 'w') as outfile:
-            json.dump(tweets_to_save, outfile)
+            json.dump(tweets_to_save, outfile, indent=4, sort_keys=True)
 
 
 if __name__ == "__main__":
