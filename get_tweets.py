@@ -15,23 +15,21 @@ class TweetReader():
         user_name = "dpa_live"
         tweets = self.api.user_timeline(screen_name=user_name, tweet_mode = "extended")
 
-        tweet_list = []
-
+        tweet_dict = {}
+        tweet_num = 0
         for t in tweets:
+            tweet_num += 1
             t = t.full_text.replace("🟠 NEWSBLOG ", "").replace("+++", "").replace("🔵 UND SONST SO? ", "").replace("+ + +", "")
-            tweet_list.append(t)
+            tweet_dict[tweet_num] = t
 
-        return tweet_list
+        return tweet_dict
     
     def save_tweets(self):
-        data = {}
-        
+
         tweets_to_save = self.load_tweets()
 
-        data["tweets"] = [tweets_to_save]
-
         with open('data/data.json', 'w') as outfile:
-            json.dump(data, outfile)
+            json.dump(tweets_to_save, outfile)
 
 
 if __name__ == "__main__":
