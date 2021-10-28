@@ -13,7 +13,7 @@ class TweetReader():
     def load_tweets(self):
         number_of_tweets = 200
         user_name = "dpa_live"
-        tweets = self.api.user_timeline(screen_name=user_name, tweet_mode = "extended")
+        tweets = self.api.user_timeline(screen_name=user_name, tweet_mode = "extended", count=number_of_tweets)
 
         tweet_dict = {}
         tweet_num = 0
