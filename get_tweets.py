@@ -1,3 +1,4 @@
+import re
 import tweepy
 import json
 from scrt import constants
@@ -20,6 +21,7 @@ class TweetReader():
         for t in tweets:
             tweet_num += 1
             t = t.full_text.replace("🟠 NEWSBLOG ", "").replace("+++", "").replace("🔵 UND SONST SO? ", "").replace("+ + +", "").replace("🔴 LIVEBLOG ", "")
+            t = re.sub(r'http\S+', '', t, flags=re.MULTILINE)
             tweet_dict[tweet_num] = t
 
         return tweet_dict
