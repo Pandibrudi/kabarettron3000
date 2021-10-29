@@ -23,7 +23,7 @@ class Punchliner():
 
         #look for the subject of the tweet to joke about it
         nlp = spacy.load("de_dep_news_trf")
-        doc = nlp(setup)
+        doc = nlp(news)
         nouns =[]
         for token in doc:
             if token.pos_ == "NOUN":
@@ -32,7 +32,7 @@ class Punchliner():
         joke_object = random.choice(nouns)
 
         joke_setup = setups[random.randint(1, len(setups))]
-        joke_punchline = punchlines[random.randint(1, len(setups))]
+        joke_punchline = punchlines[random.randint(1, len(setups))].replace("[NN]", joke_object)
 
         joke = joke_setup + news + joke_punchline
 
@@ -42,4 +42,4 @@ class Punchliner():
 
 if __name__ == "__main__":
     pl = Punchliner()
-    pl.make_joke()
+    print(pl.make_joke())
