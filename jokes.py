@@ -32,9 +32,14 @@ class Punchliner():
         joke_object = random.choice(nouns)
 
         joke_setup = setups[random.randint(1, len(setups))]
-        joke_punchline = punchlines[random.randint(1, len(setups))].replace("[NN]", joke_object)
 
-        joke = joke_setup + news + joke_punchline
+        punchline_counter = 3
+        punchline_sample = random.sample(list(punchlines), punchline_counter)
+
+        joke = joke_setup + news
+
+        for i in range(punchline_counter):
+            joke = joke + punchlines[punchline_sample[i]].replace("[NN]", joke_object) + " "
 
         return joke
 
@@ -42,4 +47,6 @@ class Punchliner():
 
 if __name__ == "__main__":
     pl = Punchliner()
+    print("\n")
     print(pl.make_joke())
+    print("\n")

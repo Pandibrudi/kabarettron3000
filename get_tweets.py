@@ -22,6 +22,8 @@ class TweetReader():
             tweet_num += 1
             t = t.full_text.replace("🟠 NEWSBLOG ", "").replace("+++", "").replace("🔵 UND SONST SO? ", "").replace("+ + +", "").replace("🔴 LIVEBLOG ", "")
             t = re.sub(r'http\S+', '', t, flags=re.MULTILINE)
+            t = t.replace("👉  @dpa via ", "").replace("Live-Updates", "").replace("🟢 SPORT-LIVETICKER", "")
+            t = t.replace("Die weitere Entwicklung:  @dpa via @online_MM", "")
             tweet_dict[tweet_num] = t
 
         return tweet_dict

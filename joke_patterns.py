@@ -1,10 +1,25 @@
 setups ={1 : "Habt ihr schon gehört?!: ",
          2 : "Und letztens, kannst du dir nicht ausdenken, heißt es: ",
-         3 : "Ich hab letztens gelesen: "}
+         3 : "Ich hab letztens gelesen: ",
+         4 : "Wirklich wahr! Jetzt heißt es auf einmal überall: ",
+         5 : "Ich hab mich letztens schon wieder aufgeregt: "}
 
 punchlines = {1 : "Wenn ich das schon höre: \'[NN]!\'",
-              2 : "Meine Oma ist so alt, selbst die kannte schon [NN].",
+              2 : "Junge, Meine Oma ist so alt, selbst die kannte schon [NN].",
               3 : "[NN] macht Kinder froh und Erwachsene ebenso!",
               4 : "Ich kannte mal wen, der immer von [NN] geredet hat. Ich sag mal so: wir reden nicht mehr miteinander.",
               5 : "Da frag ich mich: haben die noch alle Latten am Zaun?",
-              6 : "[NN] soweit kommts noch!"}
+              6 : "[NN] soweit kommts noch!",
+              7 : "Bis ich [NN] gut finde, friert die Hölle zu, Liebe Leute!",
+              8 : "kennt ihr [NN], kennt ihr [NN]??",
+              9 : "Da frag ich mich doch: wen wollen die eigentlich verarschen?",
+              10 : "Ich sag ja immer: wer [NN] nicht ehrt ist es auch nicht wert.",
+              11 : "Wie heißt es noch so schön? Wer [NN] nicht ehrt, den tritt ein Pferd?",
+              12 : "Kann mir einer mal erklären, was das sein soll? [NN]?? Das checkt doch kein normaler Mensch mehr, was die damit meinen!",
+              13 : "Von wegen [NN]. Ich hätte da ganz andere Sachen im Sinn, wenn ihr versteht, was ich meine.",
+              14 : "Wenn ich [NN] will, kann ich auch gleich zu Hause bleiben.",
+              15 : "Wenn du [NN] willst, musst du nur das Fenster aufmachen.",
+              16 : "Haben Sie mal irgendetwas sinnvolles über [NN] ghört? Ich auch nicht.",
+              17 : "Und da frag ich mich: [NN], wen interessiert das denn bitte noch?",
+              18 : "[NN], [NN], [NN] - ich kanns nicht mehr hören!",
+              19 : "[NN] kenn ich noch aus meiner Kindheit und das war damals schon scheiße."}
