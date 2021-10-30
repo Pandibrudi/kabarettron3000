@@ -5,7 +5,8 @@ class NewsReader():
 
     def __init__(self):
         self.urls = ["https://newsfeed.zeit.de/index",
-                      "https://www.tagesschau.de/xml/rss2/"
+                     "https://www.tagesschau.de/xml/rss2/",
+                     "https://rss.dw.com/xml/rss-de-all" 
                      ]
 
         self.feeds = []

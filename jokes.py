@@ -40,7 +40,7 @@ class Punchliner():
         punchline_counter = 3
         punchline_sample = random.sample(list(punchlines), punchline_counter)
 
-        joke = joke_setup + news
+        joke = joke_setup + " " + news
 
         for i in range(punchline_counter):
             joke = joke + " " + punchlines[punchline_sample[i]].replace("[NN]", joke_object) + " "

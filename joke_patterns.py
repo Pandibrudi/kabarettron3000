@@ -29,4 +29,9 @@ punchlines = {1 : "Wenn ich das schon höre: \'[NN]!\'",
               21 : "Ey komm mir nicht mit [NN].",
               22 : "Das sagen die tatsächlich so: \'[NN]\'.",
               23 : "Also ich kann mich gut erinnern, dass wir früher auch ohne [NN] ausgekommen sind.",
-              24 : "[NN] hab ich zu Hause!"}
+              24 : "[NN] hab ich zu Hause!",
+              25 : "Was soll das?",
+              26 : "Unsere Freiheit ist bedroht und die reden immer noch von [NN], das kanns doch nicht sein!",
+              27 : "Man muss sich ja nur einmal fragen, wem [NN] nützt. Da kommt man recht schnell drauf, dass das Käse ist!",
+              28 : "Dass ich nicht lache. Jetzt soll mir noch einer mal kommen und was von [NN] erzählen.",
+              29 : "Also, wer jetzt noch von [NN] spricht, dem ist auch nicht mehr zu helfen."}
