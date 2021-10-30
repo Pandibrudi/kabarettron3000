@@ -2,6 +2,7 @@ import json
 import random
 import spacy
 import pyttsx3
+from datetime import datetime
 from joke_patterns import setups, punchlines
 from get_news import NewsReader
 
@@ -10,13 +11,15 @@ class Punchliner():
     def __init__(self):
         #tr = TweetReader() #old approach
         nr = NewsReader() #new
+        nr.save_news()
+
     def get_news(self):
 
         with open("data/news.json", "r", encoding="utf-8") as file:
             data = json.load(file)
-            random_tweet = data[str(random.randint(1, len(data)))]
+            random_news = data[str(random.randint(1, len(data)-1))]
         
-        return random_tweet
+        return random_news
     
     def make_joke(self):
 
@@ -32,7 +35,7 @@ class Punchliner():
         
         joke_object = random.choice(nouns)
 
-        joke_setup = setups[random.randint(1, len(setups))]
+        joke_setup = setups[random.randint(1, len(setups)-1)]
 
         punchline_counter = 3
         punchline_sample = random.sample(list(punchlines), punchline_counter)
@@ -41,18 +44,24 @@ class Punchliner():
 
         for i in range(punchline_counter):
             joke = joke + " " + punchlines[punchline_sample[i]].replace("[NN]", joke_object) + " "
+        
+        print(joke)
 
         return joke
     
     def make_audio(self):
         joke = self.make_joke()
+        now = datetime.now()
+        time = now.strftime("%d-%m-%Y_%H-%M-%S")
+        file_name = "audio/joke_"+str(time)+".mp3"
+
         engine = pyttsx3.init()
-        engine.save_to_file(joke, 'audio/joke.mp3')
+        engine.save_to_file(joke, file_name)
         engine.runAndWait()
         
 
 if __name__ == "__main__":
     pl = Punchliner()
     print("\n")
-    print(pl.make_audio())
+    pl.make_audio()
     print("\n")
