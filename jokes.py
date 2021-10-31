@@ -63,27 +63,24 @@ class Punchliner():
         return file_name
 
     def make_video(self):
-        img = ['img/bot_img.jpg']
-        clips = [ImageClip(m).set_duration(30) for m in img] #weg finden die Dauer des Clips auf die Dauer der Audio zu setzen
-        concat_clip = concatenate_videoclips(clips, method="compose")
-        concat_clip.write_videofile("video/bot_video.mp4", fps=24)
-
         audio_file = self.make_audio()
-        videoclip = VideoFileClip("video/bot_video.mp4")
         audioclip = AudioFileClip(audio_file)
         new_audioclip = CompositeAudioClip([audioclip])
+
+        img = ['img/bot_img.jpg']
+        clips = [ImageClip(m).set_duration(new_audioclip.duration) for m in img] #weg finden die Dauer des Clips auf die Dauer der Audio zu setzen
+        concat_clip = concatenate_videoclips(clips, method="compose")
+        concat_clip.write_videofile("video/bot_video.mp4", fps=24)
+        videoclip = VideoFileClip("video/bot_video.mp4")
         videoclip.audio = new_audioclip
 
         now = datetime.now()
         time = now.strftime("%d-%m-%Y_%H-%M-%S")
         filename = f"video/comedyclip_{time}.mp4"
-        videoclip.write_videofile(filename)
-
-        
+        videoclip.write_videofile(filename, verbose=True, codec="libx264", audio_codec='aac',)
 
 if __name__ == "__main__":
     pl = Punchliner()
     print("\n")
-    pl.make_audio()
     pl.make_video()
     print("\n")
