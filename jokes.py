@@ -77,7 +77,7 @@ class Punchliner():
         now = datetime.now()
         time = now.strftime("%d-%m-%Y_%H-%M-%S")
         filename = f"video/comedyclip_{time}.mp4"
-        videoclip.write_videofile(filename, verbose=True, codec="libx264", audio_codec='aac',)
+        videoclip.write_videofile(filename, verbose=True, codec="libx264")
 
 if __name__ == "__main__":
     pl = Punchliner()

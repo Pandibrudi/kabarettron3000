@@ -35,4 +35,8 @@ punchlines = {1 : "Wenn ich das schon höre: \'[NN]!\'",
               27 : "Man muss sich ja nur einmal fragen, wem [NN] nützt. Da kommt man recht schnell drauf, dass das Käse ist!",
               28 : "Dass ich nicht lache. Jetzt soll mir noch einer mal kommen und was von [NN] erzählen.",
               29 : "Also, wer jetzt noch von [NN] spricht, dem ist auch nicht mehr zu helfen.",
-              30 : "Früher, also früher, da gab's das klar! Aber [NN] von heute hat damit doch nichts mehr zu tun."}
+              30 : "Früher, also früher, da gab's das klar! Aber [NN] von heute hat damit doch nichts mehr zu tun.",
+              31 : "[NN]? Da gibt es doch bestimmt Tabletten gegen, oder?",
+              32 : "Ich will ja nichts sagen, aber ich glaube, das hätte man ahnen können, wenn es um [NN] geht.",
+              33 : "Mich überrascht da gar nichts mehr. Wenn die da oben [NN] wollen, dann kriegen sie auch [NN].",
+              34 : "Aber, vorsicht! [NN] ist ja nicht gleich [NN]."}

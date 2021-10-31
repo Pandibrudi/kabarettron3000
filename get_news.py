@@ -18,6 +18,7 @@ class NewsReader():
         for feed in self.feeds:
             for post in feed.entries:
                 self.news.append(post.title)
+        print("News geladen!")
 
     def save_news(self):
         self.news_dict = {}
