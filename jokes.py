@@ -2,6 +2,7 @@ import json
 import random
 import spacy
 import pyttsx3
+from moviepy.editor import *
 from datetime import datetime
 from joke_patterns import setups, punchlines
 from get_news import NewsReader
@@ -58,10 +59,31 @@ class Punchliner():
         engine = pyttsx3.init()
         engine.save_to_file(joke, file_name)
         engine.runAndWait()
+
+        return file_name
+
+    def make_video(self):
+        img = ['img/bot_img.jpg']
+        clips = [ImageClip(m).set_duration(30) for m in img] #weg finden die Dauer des Clips auf die Dauer der Audio zu setzen
+        concat_clip = concatenate_videoclips(clips, method="compose")
+        concat_clip.write_videofile("video/bot_video.mp4", fps=24)
+
+        audio_file = self.make_audio()
+        videoclip = VideoFileClip("video/bot_video.mp4")
+        audioclip = AudioFileClip(audio_file)
+        new_audioclip = CompositeAudioClip([audioclip])
+        videoclip.audio = new_audioclip
+
+        now = datetime.now()
+        time = now.strftime("%d-%m-%Y_%H-%M-%S")
+        filename = f"video/comedyclip_{time}.mp4"
+        videoclip.write_videofile(filename)
+
         
 
 if __name__ == "__main__":
     pl = Punchliner()
     print("\n")
     pl.make_audio()
+    pl.make_video()
     print("\n")
