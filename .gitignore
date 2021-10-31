@@ -3,7 +3,8 @@ scrt.py
 
 #data
 data/news.json
-audio/
+audio/*
+video/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
