@@ -1,3 +1,20 @@
+buzzwords = {1 : "Männer",
+             2 : "Frauen",
+             3 : "Dating",
+             4 : "das Internet",
+             5 : "Veganismus",
+             6 : "Liebe",
+             7 : "Wetter",
+             8 : "Kinder",
+             9 : "Geld",
+             10 : "Tod"}
+
+greetings = {1 : "Guten Abend [P]!",
+             2 : "Hallo Liebe Menschen in [P]!",
+             3 : "[P] seid ihr gut drauf?!",
+             4 : "Hallo. Rufe GPS-Daten ab. [P].",
+             5 : "Hey ich habe gehört es gibt nur schöne Menschen in [P]"}
+
 setups ={1 : "Habt ihr schon gehört?!: ",
          2 : "Und letztens, kannst du dir nicht ausdenken, heißt es: ",
          3 : "Ich hab letztens gelesen: ",
@@ -39,4 +56,21 @@ punchlines = {1 : "Wenn ich das schon höre: \'[NN]!\'",
               31 : "[NN]? Da gibt es doch bestimmt Tabletten gegen, oder?",
               32 : "Ich will ja nichts sagen, aber ich glaube, das hätte man ahnen können, wenn es um [NN] geht.",
               33 : "Mich überrascht da gar nichts mehr. Wenn die da oben [NN] wollen, dann kriegen sie auch [NN].",
-              34 : "Aber, vorsicht! [NN] ist ja nicht gleich [NN]."}
+              34 : "Aber, vorsicht! [NN] ist ja nicht gleich [NN].",
+              35 : "Ja, wenn du über [NN] redest, kannst du ja auch gleich über [A] reden!",
+              36 : "Boah, stell dir das mal vor! Da bestellst du [NN], bekommst aber [A]. Also ich wäre sauer!",
+              37 : "[NN] haben die gesagt! Wirklich war und da dachte ich mir: das kenne ich doch! Aber früher hieß das bei uns [A]",
+              38 : "[NN], [NN], wenn ich das schon höre! Sag doch einfach [A] und gut ist!",
+              39 : "Ja, Sie lachen! Aber alle reden immer von [NN] aber niemand. Wirklich niemand spricht von [A]."}
+
+#NT = New Topic, OT = Old Topic
+
+transitions = {1 : "Wo wir gerade schon bei [NT] sind!",
+               2 : "Thema [NT].",
+               3 : "Appropos [NT].",
+               4 : "Wo wir gerade über [NT] sprechen.",
+               5 : "Aber genug von [OT], lasst uns mal kurz über das Thema [NT] sprechen?!",
+               6 : "Anderes Thema: [NT].",
+               7 : "Aber was erzähle ich euch von [OT], wir alle wollen über eine Sache sprechen und das ist - na klar: [NT].",
+               8 : "Ihr kennt doch sicher [NT].",
+               9 : "Okay, aber nun mal zu einem Thema, das mir wirklich am Herzen liegt. Etwas, wo in unserer Gesellschaft zu wenig drüber gesprochen wird: [NT]."}
