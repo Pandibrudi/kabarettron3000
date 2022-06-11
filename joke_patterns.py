@@ -61,7 +61,13 @@ punchlines = {1 : "Wenn ich das schon höre: \'[NN]!\'",
               36 : "Boah, stell dir das mal vor! Da bestellst du [NN], bekommst aber [A]. Also ich wäre sauer!",
               37 : "[NN] haben die gesagt! Wirklich war und da dachte ich mir: das kenne ich doch! Aber früher hieß das bei uns [A]",
               38 : "[NN], [NN], wenn ich das schon höre! Sag doch einfach [A] und gut ist!",
-              39 : "Ja, Sie lachen! Aber alle reden immer von [NN] aber niemand. Wirklich niemand spricht von [A]."}
+              39 : "Ja, Sie lachen! Aber alle reden immer von [NN] aber niemand. Wirklich niemand spricht von [A].",
+              40 : "Also wenn deine größte Sorge [NN] ist, kannst du gleich nach Hause gehen.",
+              41 : "Oho die feinen Menschen haben also endlich [NN] entdeckt. Bravo!",
+              42 : "Mal unter uns: wer von euch kennt sich überhaupt mit [NN] aus? Also ich nicht.",
+              43 : "Bruder, komm mir noch einmal mit [NN]. Ich schwöre ich mach bald ein Rapalbum als MC [NN].",
+              44 : "Hört her, hört her es geht mal wieder um [NN].",
+              55 : "Dass ich nicht lache."}
 
 #NT = New Topic, OT = Old Topic
 

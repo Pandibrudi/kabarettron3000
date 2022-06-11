@@ -11,7 +11,8 @@ from get_news import NewsReader
 class Punchliner():
 
     def __init__(self):
-        #tr = TweetReader() #old approach
+        #evtl hier die punchlines sammeln, sodass sich das programm es aus 
+        #einer instanzierten Version der Tabelle zieht und samples nehmen kann
         nr = NewsReader() #new
         nr.save_news()
 
