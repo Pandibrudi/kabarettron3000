@@ -59,7 +59,7 @@ punchlines = {1 : "Wenn ich das schon höre: \'[NN]!\'",
               34 : "Aber, vorsicht! [NN] ist ja nicht gleich [NN].",
               35 : "Ja, wenn du über [NN] redest, kannst du ja auch gleich über [A] reden!",
               36 : "Boah, stell dir das mal vor! Da bestellst du [NN], bekommst aber [A]. Also ich wäre sauer!",
-              37 : "[NN] haben die gesagt! Wirklich war und da dachte ich mir: das kenne ich doch! Aber früher hieß das bei uns [A]",
+              37 : "[NN] haben die gesagt! Wirklich war und da dachte ich mir: das kenne ich doch! Aber früher hieß das bei uns [A].",
               38 : "[NN], [NN], wenn ich das schon höre! Sag doch einfach [A] und gut ist!",
               39 : "Ja, Sie lachen! Aber alle reden immer von [NN] aber niemand. Wirklich niemand spricht von [A].",
               40 : "Also wenn deine größte Sorge [NN] ist, kannst du gleich nach Hause gehen.",
@@ -67,7 +67,9 @@ punchlines = {1 : "Wenn ich das schon höre: \'[NN]!\'",
               42 : "Mal unter uns: wer von euch kennt sich überhaupt mit [NN] aus? Also ich nicht.",
               43 : "Bruder, komm mir noch einmal mit [NN]. Ich schwöre ich mach bald ein Rapalbum als MC [NN].",
               44 : "Hört her, hört her es geht mal wieder um [NN].",
-              55 : "Dass ich nicht lache."}
+              55 : "Dass ich nicht lache.",
+              56 : "Ja, schieß mir ins Bein und nenn mich Jürgen, \'[NN]\', das ist doch nicht mehr normal!",
+              57 : "Ich sage euch, bald dreh ich durch."}
 
 #NT = New Topic, OT = Old Topic
 
@@ -80,3 +82,11 @@ transitions = {1 : "Wo wir gerade schon bei [NT] sind!",
                7 : "Aber was erzähle ich euch von [OT], wir alle wollen über eine Sache sprechen und das ist - na klar: [NT].",
                8 : "Ihr kennt doch sicher [NT].",
                9 : "Okay, aber nun mal zu einem Thema, das mir wirklich am Herzen liegt. Etwas, wo in unserer Gesellschaft zu wenig drüber gesprochen wird: [NT]."}
+
+
+
+endings = {1 : "[P], ihr wart wunderbar!",
+           2 : "Das war's von mir, ciao!",
+           3 : "Danke, ihr wart ein Publikum.",
+           4 : "Vielen Dank, das wars!",
+           5 : "Aber naja. Liebe Menschen in [P], das war's von mir!"}

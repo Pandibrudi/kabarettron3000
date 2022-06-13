@@ -5,7 +5,7 @@ import pyttsx3
 from moviepy.editor import *
 from datetime import datetime
 from associations import get_associations
-from joke_patterns import setups, punchlines, greetings, transitions
+from joke_patterns import setups, punchlines, greetings, transitions, endings
 from get_news import NewsReader
 
 class Punchliner():
@@ -83,6 +83,8 @@ class Punchliner():
 
         city_joke = self.make_joke_from_topic(5, rnd_city_association)
 
+        ending = random.choice(list(endings.values()))
+
         jokes = ""     
 
         for i in range(5):
@@ -94,7 +96,7 @@ class Punchliner():
             topic_joke = self.make_joke_from_topic(5, rnd_news_association)
             jokes = jokes + "\n" + news_joke + " " + news_transition + " " + topic_joke + " "
 
-        comedy_set = greeting + " " + transition_entry + " " + city_joke + " " + jokes
+        comedy_set = greeting + " " + transition_entry + " " + city_joke + " " + jokes + ending
 
         print(comedy_set)
         return comedy_set
@@ -132,7 +134,7 @@ class Punchliner():
 if __name__ == "__main__":
     pl = Punchliner()
     print("\n")
-    pl.make_audio("Dortmund")
+    pl.make_audio("Wien")
     #pl.make_comedy_set("Hamburg")
     #pl.make_joke_from_topic(4, "Hühner")
     print("\n")

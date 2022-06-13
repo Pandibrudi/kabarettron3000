@@ -25,7 +25,7 @@ def get_associations(word):
         doc = nlp(page_py.summary) #vielleicht mehr als nur das wiki summary
         for token in doc:
             if token.pos_ == "NOUN":
-                if token.pos not in associations:
+                if token.pos_ not in associations:
                     if len(token.text) > 2:
                         associations.append(token.text.replace("Siehe",""))
         
@@ -40,18 +40,19 @@ def get_associations(word):
         ergebnis = ergebnis[1]
 
         for w in ergebnis:
-            w = w.replace(word.lower(), "")
             if len(word) > 3:
                 associations.append(w.strip(" "))
+        
+        associations = list(dict.fromkeys(associations)) #remove duplicates
 
     except:
         print("Error while getting Wikipedia and Google!")
-        associations = random.choice(list(buzzwords.values()))
-        associations = associations
+        rnd_buzzword = random.choice(list(buzzwords.values()))
+        associations.append(rnd_buzzword)
     
     if len(associations) == 0:
         print(f"No Associations found for {word}.")
-        associations = random.choice(list(buzzwords.values()))
-        associations = associations
+        rnd_buzzword = random.choice(list(buzzwords.values()))
+        associations.append(rnd_buzzword)
     
     return associations
