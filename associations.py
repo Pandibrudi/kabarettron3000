@@ -9,9 +9,7 @@ from joke_patterns import buzzwords
 
 def get_associations(word):
 
-
     associations = []
-
     
     try:
         #Wikipedia Part

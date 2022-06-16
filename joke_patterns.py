@@ -69,7 +69,11 @@ punchlines = {1 : "Wenn ich das schon höre: \'[NN]!\'",
               44 : "Hört her, hört her es geht mal wieder um [NN].",
               55 : "Dass ich nicht lache.",
               56 : "Ja, schieß mir ins Bein und nenn mich Jürgen, \'[NN]\', das ist doch nicht mehr normal!",
-              57 : "Ich sage euch, bald dreh ich durch."}
+              57 : "Ich sage euch, bald dreh ich durch.",
+              58 : "Kennt ihr das auch?",
+              59 : "Immer, wenn jemand [NN] sagt zieht sich in mir etwas zusammen.",
+              60 : "Hahahaha, [NN]!!",
+              61 : "Da weiß man auch nicht, ob man lachen oder weinen soll."}
 
 #NT = New Topic, OT = Old Topic
 
@@ -81,7 +85,8 @@ transitions = {1 : "Wo wir gerade schon bei [NT] sind!",
                6 : "Anderes Thema: [NT].",
                7 : "Aber was erzähle ich euch von [OT], wir alle wollen über eine Sache sprechen und das ist - na klar: [NT].",
                8 : "Ihr kennt doch sicher [NT].",
-               9 : "Okay, aber nun mal zu einem Thema, das mir wirklich am Herzen liegt. Etwas, wo in unserer Gesellschaft zu wenig drüber gesprochen wird: [NT]."}
+               9 : "Okay, aber nun mal zu einem Thema, das mir wirklich am Herzen liegt. Etwas, wo in unserer Gesellschaft zu wenig drüber gesprochen wird: [NT].",
+               10 : "Aber man kann ja nicht über [OT] sprechen, ohne über [NT] zu sprechen!"}
 
 
 

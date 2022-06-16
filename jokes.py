@@ -13,7 +13,11 @@ class Punchliner():
     def __init__(self):
         #evtl hier die punchlines sammeln, sodass sich das programm es aus 
         #einer instanzierten Version der Tabelle zieht und samples nehmen kann
-        nr = NewsReader() #new
+        # self.topic_length 
+        # self.num_topics
+        # Diese Werte müssten dazu vordefiniert werden sobald die Klasse aufgerufen wird
+        # dann lässt sich errechnen wie groß die Sample der einzelnen Patterns sein müssen
+        nr = NewsReader() 
         nr.save_news()
 
     def get_news(self):
@@ -72,7 +76,7 @@ class Punchliner():
         
         return transition
 
-    def make_comedy_set(self, city):
+    def make_comedy_set(self, city, num_topics):
         greeting = greetings[random.randint(1, len(greetings)-1)]
         greeting = greeting.replace("[P]", city)
 
@@ -84,11 +88,14 @@ class Punchliner():
         city_joke = self.make_joke_from_topic(5, rnd_city_association)
 
         ending = random.choice(list(endings.values()))
+        ending = ending.replace("[P]", city)
 
         jokes = ""     
 
-        for i in range(5):
-            news_joke_and_topic = self.make_joke_from_news(5)
+        for i in range(num_topics):
+            #kann auch variiert werden oder zufallsbasiert sein, wie lang ein Thema abgehandelt wird
+            #könnte im GUI dann eingestellt werden
+            news_joke_and_topic = self.make_joke_from_news(5) 
             news_joke = news_joke_and_topic[0]
             news_associations = get_associations(news_joke_and_topic[1])
             rnd_news_association = random.choice(news_associations)
@@ -103,7 +110,7 @@ class Punchliner():
 
     
     def make_audio(self, city):
-        joke = self.make_comedy_set(city)
+        joke = self.make_comedy_set(city, 5)
         now = datetime.now()
         time = now.strftime("%d-%m-%Y_%H-%M-%S")
         file_name = "audio/joke_"+str(time)+".mp3"
