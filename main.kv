@@ -1,0 +1,108 @@
+#:kivy 2.0.0
+<Interface>:
+    output: output
+    input_city: input_city
+    input_topics: input_topics
+    input_name: input_name
+    read_aloud_check: read_aloud_check
+
+    GridLayout:
+        cols: 1
+        size: root.width - 100 , root.height - 100
+        pos: 50,50
+        
+        GridLayout:
+            cols: 1
+            rows: 2
+
+            Label:
+                text: 'Kabarettttron3000'
+                font_size: 60
+        
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: 'Stadt'
+                font_size: 30
+
+            TextInput:
+                id: input_city
+                multiline: False
+                font_size: 30
+                halign: 'center'
+                valign: 'middle'
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: 'Name'
+                font_size: 30
+
+            TextInput:
+                id: input_name
+                multiline: False
+                font_size: 30
+                halign: 'center'
+                valign: 'middle'
+        
+        GridLayout:
+            cols: 3
+
+            Label:
+                text: "Themen"
+                font_size: 30
+            
+            Slider:
+                id: input_topics
+                orientation: "horizontal"
+                min: 1  
+                max: 10 
+                value: 1
+                on_value:current_lines.text = str(int(self.value))
+                font_size: 30
+                halign: 'center'
+                valign: 'middle'
+            
+            Label:
+                id: current_lines
+                font_size: 30
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Vorlesen"
+                font_size: 30
+            
+            CheckBox:
+                id: read_aloud_check
+
+
+        GridLayout:
+            cols: 2
+
+            Button:
+                text: 'Generieren'
+                font_size: 30
+                on_release: root.generate()
+            
+            Button:
+                text: 'News laden'
+                font_size: 30
+                on_release: root.load_news()
+        
+        GridLayout:
+            cols: 1
+
+            TextInput:
+                id: output
+                font_size: 10
+                multiline: True
+
+<P>:
+    Label:
+        text: "Die aktuellen Schlagzeilen wurden geladen!"
+        size_hint: 0.6, 0.2
+        pos_hint: {"x":0.2, "top":1}

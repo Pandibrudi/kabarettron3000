@@ -17,6 +17,9 @@ class Punchliner():
         # self.num_topics
         # Diese Werte müssten dazu vordefiniert werden sobald die Klasse aufgerufen wird
         # dann lässt sich errechnen wie groß die Sample der einzelnen Patterns sein müssen
+        pass
+    
+    def update_news(self):
         nr = NewsReader() 
         nr.save_news()
 
@@ -109,17 +112,17 @@ class Punchliner():
         return comedy_set
 
     
-    def make_audio(self, city):
-        joke = self.make_comedy_set(city, 5)
+    def make_audio(self, city, topics):
+        joke = self.make_comedy_set(city, topics)
         now = datetime.now()
         time = now.strftime("%d-%m-%Y_%H-%M-%S")
-        file_name = "audio/joke_"+str(time)+".mp3"
+        file_name = "audio/joke_"+str(time)+".wav"
 
         engine = pyttsx3.init()
         engine.save_to_file(joke, file_name)
         engine.runAndWait()
 
-        return file_name
+        return file_name, joke
 
     def make_video(self, city):
         audio_file = self.make_audio(city)
@@ -141,7 +144,7 @@ class Punchliner():
 if __name__ == "__main__":
     pl = Punchliner()
     print("\n")
-    pl.make_audio("Wien")
+    #pl.make_audio("Hamburg")
     #pl.make_comedy_set("Hamburg")
-    #pl.make_joke_from_topic(4, "Hühner")
+    #pl.make_joke_from_topic(10, "Hühner")
     print("\n")
