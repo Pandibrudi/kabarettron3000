@@ -16,7 +16,7 @@
             rows: 2
 
             Label:
-                text: 'Kabarettttron3000'
+                text: 'Kabaretttron3000'
                 font_size: 60
         
         GridLayout:
@@ -81,7 +81,7 @@
 
 
         GridLayout:
-            cols: 2
+            cols: 4
 
             Button:
                 text: 'Generieren'
@@ -92,6 +92,16 @@
                 text: 'News laden'
                 font_size: 30
                 on_release: root.load_news()
+            
+            Button:
+                text: 'Stop'
+                font_size: 30
+                on_release: root.stop()
+            
+            Button:
+                text: 'Löschen'
+                font_size: 30
+                on_release: root.clear()
         
         GridLayout:
             cols: 1

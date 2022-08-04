@@ -33,6 +33,18 @@ class Interface(Widget):
             joke = self.pl.make_comedy_set(self.city, self.topics)
             self.output.text = joke
     
+    def stop(self):
+        try:
+            self.media.stop()
+        except:
+            pass
+
+    def clear(self):
+        try:
+            self.output.text = ""
+        except:
+            pass
+    
     def show_popup_loaded_news(self):
         show = P() 
         popupWindow = Popup(title="Popup Window", content=show, size_hint=(None,None),size=(400,400)) 
