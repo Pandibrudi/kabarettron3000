@@ -2,10 +2,12 @@ from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.popup import Popup
+from kivy.core.window import Window
 from kivy.properties import ObjectProperty
 from jokes import Punchliner
 import vlc
 
+Window.size = (1080, 780)
 
 class P(FloatLayout):
         pass

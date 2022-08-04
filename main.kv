@@ -6,10 +6,17 @@
     input_name: input_name
     read_aloud_check: read_aloud_check
 
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'img/back.jpg'
+
     GridLayout:
         cols: 1
         size: root.width - 100 , root.height - 100
         pos: 50,50
+        
         
         GridLayout:
             cols: 1
@@ -17,13 +24,17 @@
 
             Label:
                 text: 'Kabaretttron3000'
-                font_size: 60
+                font_name: 'Comic'
+                color: 'red'
+                font_size: 40
         
         GridLayout:
             cols: 2
 
             Label:
                 text: 'Stadt'
+                font_name: 'Comic'
+                color: 'red'
                 font_size: 30
 
             TextInput:
@@ -38,6 +49,8 @@
 
             Label:
                 text: 'Name'
+                font_name: 'Comic'
+                color: 'red'
                 font_size: 30
 
             TextInput:
@@ -52,6 +65,8 @@
 
             Label:
                 text: "Themen"
+                font_name: 'Comic'
+                color: 'red'
                 font_size: 30
             
             Slider:
@@ -68,12 +83,17 @@
             Label:
                 id: current_lines
                 font_size: 30
+                font_name: 'Comic'
+                color: 'red'
 
         GridLayout:
             cols: 2
 
             Label:
                 text: "Vorlesen"
+                font_name: 'Comic'
+                background_color: 255, 240, 0, 1 
+                color: 'red'
                 font_size: 30
             
             CheckBox:
@@ -81,25 +101,40 @@
 
 
         GridLayout:
-            cols: 4
+            cols: 2
 
             Button:
                 text: 'Generieren'
+                font_name: 'Comic'
+                color: 'red'
+                background_color: 255, 240, 0, 1 
                 font_size: 30
                 on_release: root.generate()
             
             Button:
                 text: 'News laden'
+                font_name: 'Comic'
+                color: 'red'
+                background_color: 255, 240, 0, 1 
                 font_size: 30
                 on_release: root.load_news()
+        
+        GridLayout:
+            cols: 2
             
             Button:
                 text: 'Stop'
+                font_name: 'Comic'
+                color: 'red'
+                background_color: 255, 240, 0, 1 
                 font_size: 30
                 on_release: root.stop()
             
             Button:
                 text: 'Löschen'
+                font_name: 'Comic'
+                color: 'red'
+                background_color: 255, 240, 0, 1 
                 font_size: 30
                 on_release: root.clear()
         
@@ -108,6 +143,7 @@
 
             TextInput:
                 id: output
+                font_name: 'Comic'
                 font_size: 10
                 multiline: True
 
