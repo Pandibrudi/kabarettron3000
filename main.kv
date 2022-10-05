@@ -3,6 +3,7 @@
     output: output
     input_city: input_city
     input_topics: input_topics
+    input_punchlines: input_punchlines
     input_name: input_name
     read_aloud_check: read_aloud_check
 
@@ -73,7 +74,7 @@
                 id: input_topics
                 orientation: "horizontal"
                 min: 1  
-                max: 10 
+                max: 5 
                 value: 1
                 on_value:current_lines.text = str(int(self.value))
                 font_size: 30
@@ -82,6 +83,32 @@
             
             Label:
                 id: current_lines
+                font_size: 30
+                font_name: 'Comic'
+                color: 'red'
+
+        GridLayout:
+            cols: 3
+
+            Label:
+                text: "Punchline pro Thema"
+                font_name: 'Comic'
+                color: 'red'
+                font_size: 20
+            
+            Slider:
+                id: input_punchlines
+                orientation: "horizontal"
+                min: 1  
+                max: 10 
+                value: 1
+                on_value:current_punchlines.text = str(int(self.value))
+                font_size: 30
+                halign: 'center'
+                valign: 'middle'
+            
+            Label:
+                id: current_punchlines
                 font_size: 30
                 font_name: 'Comic'
                 color: 'red'
@@ -98,7 +125,7 @@
             
             CheckBox:
                 id: read_aloud_check
-
+                color: 'red'
 
         GridLayout:
             cols: 2
@@ -152,3 +179,4 @@
         text: "Die aktuellen Schlagzeilen wurden geladen!"
         size_hint: 0.6, 0.2
         pos_hint: {"x":0.2, "top":1}
+    

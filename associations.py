@@ -3,9 +3,9 @@ import random
 import wikipediaapi
 from base64 import decode
 import requests, json
-from joke_patterns import buzzwords
+from joke_patterns import joke_patterns
 
-
+### https://github.com/uhh-lt/sensegram/blob/master/QuickStart.ipynb nutzen!
 
 def get_associations(word):
 
@@ -45,12 +45,15 @@ def get_associations(word):
 
     except:
         print("Error while getting Wikipedia and Google!")
+        buzzwords = joke_patterns["buzzwords"]
         rnd_buzzword = random.choice(list(buzzwords.values()))
         associations.append(rnd_buzzword)
     
     if len(associations) == 0:
+        buzzwords = joke_patterns["buzzwords"]
         print(f"No Associations found for {word}.")
         rnd_buzzword = random.choice(list(buzzwords.values()))
         associations.append(rnd_buzzword)
     
     return associations
+    
