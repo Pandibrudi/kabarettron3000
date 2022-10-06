@@ -8,7 +8,7 @@ from kivy.properties import ObjectProperty
 from jokes import Punchliner
 import vlc
 
-Window.size = (1080, 780)
+Window.size = (1920, 1080)
 
 class Interface(Widget):
     pl = Punchliner()
@@ -26,7 +26,7 @@ class Interface(Widget):
         self.punchlines = int(self.input_punchlines.value)
 
         if self.read_aloud_check.active:#muss noch angepasst werden
-            joke = self.pl.make_audio(self.city, self.topics)#also hier die arguments 
+            joke = self.pl.make_audio(self.city, self.name, self.topics, self.punchlines)#also hier die arguments 
             self.output.text = joke[1]
             self.filename = joke[0]
             self.media = vlc.MediaPlayer(self.filename)
