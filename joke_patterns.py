@@ -87,7 +87,8 @@ joke_patterns = {"buzzwords" : {1 : "Männer",
                              2 : "Das war's von mir, ciao!",
                              3 : "Danke, ihr wart ein Publikum.",
                              4 : "Vielen Dank, das wars!",
-                             5 : "Aber naja. Liebe Menschen in [P], das war's von mir!"}
+                             5 : "Aber naja. Liebe Menschen in [P], das war's von mir!",
+                             6 : "Das war's von mir! Ich bin die ganze Woche da!"}
 }
 
 
