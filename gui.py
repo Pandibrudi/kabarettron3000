@@ -8,7 +8,7 @@ from kivy.properties import ObjectProperty
 from jokes import Punchliner
 import vlc
 
-Window.size = (1080, 780)
+Window.size = (1920, 1080)
 
 class Interface(Widget):
     pl = Punchliner()

@@ -105,6 +105,7 @@ class Punchliner():
         print(f"Ende: {ending}")"""
 
         comedy_set = greeting[0] #weil es das erste ist
+        comedy_set = comedy_set.replace("[NN]", name)
 
         parts = []
         topics = []
@@ -165,8 +166,8 @@ class Punchliner():
 
         return file_name, comedy_set
 
-    def make_video(self, city):
-        audio_file = self.make_audio(city)
+    def make_video(self, city, name, topic_num, punchline_counter):
+        audio_file = self.make_audio(city, name, topic_num, punchline_counter)
         audioclip = AudioFileClip(audio_file)
         new_audioclip = CompositeAudioClip([audioclip])
 
@@ -188,7 +189,11 @@ if __name__ == "__main__":
     #pl.make_audio("Hamburg", "Francesca", 3, 4)
     #pl.make_comedy_set("Hamburg")
     #pl.make_joke_from_topic(10, "Hühner")
+<<<<<<< HEAD
     #print(pl.make_comedy_set("Hamburg", "Manfred", 3, 4))
+=======
+    pl.make_video("Hamburg", "Manfred", 3, 4)
+>>>>>>> d6082c15fc6e34dc83c9351de20edd0133a93f40
     print("\n")
     
 
