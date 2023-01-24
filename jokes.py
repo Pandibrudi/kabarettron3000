@@ -153,8 +153,8 @@ class Punchliner():
 
 
     
-    def make_audio(self, city, topic_num, punchline_counter):
-        comedy_set = self.make_comedy_set(city, topic_num, punchline_counter)
+    def make_audio(self, city, name, topic_num, punchline_counter):
+        comedy_set = self.make_comedy_set(city, name, topic_num, punchline_counter)
         now = datetime.now()
         time = now.strftime("%d-%m-%Y_%H-%M-%S")
         file_name = "audio/joke_"+str(time)+".wav"
@@ -185,10 +185,10 @@ class Punchliner():
 if __name__ == "__main__":
     pl = Punchliner()
     print("\n")
-    #pl.make_audio("Hamburg")
+    #pl.make_audio("Hamburg", "Francesca", 3, 4)
     #pl.make_comedy_set("Hamburg")
     #pl.make_joke_from_topic(10, "Hühner")
-    print(pl.make_comedy_set("Hamburg", "Manfred", 3, 4))
+    #print(pl.make_comedy_set("Hamburg", "Manfred", 3, 4))
     print("\n")
     
 
